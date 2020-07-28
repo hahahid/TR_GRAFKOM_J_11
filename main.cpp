@@ -3488,7 +3488,7 @@ void tampil(void){
     rdosen();
 
     objek();
-
+    gerak();
     glPopMatrix();
     glutSwapBuffers();
 }
