@@ -50,10 +50,10 @@ void depan(void){
     ///depan
     glBegin(GL_QUADS);
     glColor3f(255/255.0, 250/255.0, 205/255.0);
-    glVertex3f(-55.0, -50.0, 10.0);
+    glVertex3f(-55.0, -30.0, 10.0);
     glVertex3f(-55.0, 30.0, 10.0);
     glVertex3f(55.0, 30.0, 10.0);
-    glVertex3f(55.0, -50.0, 10.0);
+    glVertex3f(55.0, -30.0, 10.0);
     glEnd();
     ///depan kanan
     glBegin(GL_QUADS);
@@ -1905,7 +1905,7 @@ void jendela(void){
 
     ///kiri
     x=0,y=0;
-    for(int j=0;j<3;j++){
+    for(int j=0;j<4;j++){
         for(int i=0;i<2;i++){
             glBegin(GL_QUADS);
             glColor3f(192/255.0, 192/255.0, 192/255.0);
@@ -2079,7 +2079,7 @@ void jendela(void){
     }
 
     x=0,y=0;
-    for(int j=0;j<3;j++){
+    for(int j=0;j<4;j++){
         glBegin(GL_QUADS);
         glColor3f(192/255.0, 192/255.0, 192/255.0);
         glVertex3f(-71.0, 10.0-y, 30.0);
@@ -2167,7 +2167,7 @@ void jendela(void){
 
     ///kanan
     x=0,y=0;
-    for(int j=0;j<3;j++){
+    for(int j=0;j<4;j++){
         glBegin(GL_QUADS);
         glColor3f(192/255.0, 192/255.0, 192/255.0);
         glVertex3f(71.0, 10.0-y, 30.0);
@@ -2254,7 +2254,7 @@ void jendela(void){
     }
 
     x=0,y=0;
-    for(int j=0;j<3;j++){
+    for(int j=0;j<4;j++){
         for(int i=0;i<2;i++){
             glBegin(GL_QUADS);
             glColor3f(192/255.0, 192/255.0, 192/255.0);
