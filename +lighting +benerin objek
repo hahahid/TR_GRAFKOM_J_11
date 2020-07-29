@@ -215,13 +215,23 @@ void alas(void){
 }
 
 void pembatas_kelas(void){
+    //DEPAN
+    glBegin(GL_QUADS);
+        glColor3f(200/255.0, 200/255.0, 200/255.0);
+        glVertex3f(45.0, -50.0, -20.0);
+        glVertex3f(45.0, 30.0, -20.0);
+        glVertex3f(45.0, 30.0, 10.0);
+        glVertex3f(45.0, -50.0, 10.0);
+        glEnd();
+
+
     //TEPI
     glBegin(GL_QUADS);
         glColor3f(224/255.0, 224/255.0, 224/255.0);
         glVertex3f(45.0, -50.0, -20.0);
         glVertex3f(45.0, 30.0, -20.0);
-        glVertex3f(110.0, 30.0, -20.0);
-        glVertex3f(110.0, -50.0, -20.0);
+        glVertex3f(130.0, 30.0, -20.0);
+        glVertex3f(130.0, -50.0, -20.0);
         glEnd();
 
         glPointSize(6.0);
@@ -4024,6 +4034,16 @@ glLineWidth(4.0);
 
 void lt3 (void){
 
+        ///DEPAN
+    glBegin(GL_QUADS);
+        glColor3f(200/255.0, 200/255.0, 200/255.0);
+        glVertex3f(-110.0, -50.0, -20.0);
+        glVertex3f(-110.0, 30.0, -20.0);
+        glVertex3f(-130.0, 30.0, -20.0);
+        glVertex3f(-130.0, -50.0, -20.0);
+        glEnd();
+
+
 /// RUANG RAPAT ///
 
 ///MEJA///
@@ -4720,6 +4740,19 @@ void rdosen(void){
 
 }
 
+void aspal(void){
+        //DEPAN
+    glBegin(GL_QUADS);
+        glColor3f(200/255.0, 200/255.0, 200/255.0);
+        glVertex3f(-200.0, -52.0, 100.0);
+        glVertex3f(-200.0, -52.0, -150.0);
+        glVertex3f(200.0, -52.0, -150.0);
+        glVertex3f(200.0, -52.0, 100.0);
+        glEnd();
+
+
+}
+
 void tampil(void){
 
         glPushMatrix();
@@ -4733,6 +4766,7 @@ void tampil(void){
        glRotatef(xrot, 1.0f,0.0f, 0.0f);
        glRotatef(yrot, 0.0f, 1.0f, 0.0f);
 
+    aspal();
     pintu();
     jendela();
     balkon();
