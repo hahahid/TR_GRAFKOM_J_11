@@ -46,6 +46,24 @@ void init(void){
 
 }
 
+void ngon(int n, float cx, float cy, float radius, float rotAngle,float z){
+    double angle, angleInc;
+    int k;
+
+    if(n<3) return;
+    angle=rotAngle*3.14159265/180;
+    angleInc=2*3.14159265/n;
+
+   /* //ini titik pertama
+    glVertex3f(radius*cos(angle)+cy, radius*sin(angle)+cy,z);
+*/
+    //ini titik berikutnya
+    for(k=0;k<n;k++){
+        angle+=angleInc;
+        glVertex3f(radius*cos(angle)+cx, radius*sin(angle)+cy,z);
+    }
+}
+
 void depan(void){
     ///depan
     glBegin(GL_QUADS);
@@ -87,7 +105,7 @@ void belakang (void){
 void kiri(void){
     ///kiri
     glBegin(GL_QUADS);
-    glColor3f(255/255.0, 0/255.0, 205/255.0);
+    glColor3ub(255-20, 250-20, 205-20);
     glVertex3f(-55.0, 30.0, 30.0);
     glVertex3f(-55.0, -50.0, 30.0);
     glVertex3f(-55.0, -50.0, 10.0);
@@ -95,7 +113,7 @@ void kiri(void){
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(255/255.0, 0/255.0, 205/255.0);
+    glColor3ub(255-20, 250-20, 205-20);
     glVertex3f(-130.0, 30.0, 30.0);
     glVertex3f(-130.0, -50.0, 30.0);
     glVertex3f(-130.0, -50.0, -20.0);
@@ -111,7 +129,7 @@ void kiri(void){
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(255/255.0, 0/255.0, 205/255.0);
+    glColor3ub(255-20, 250-20, 205-20);
     glVertex3f(-180.0, 30.0, -20.0);
     glVertex3f(-180.0, -50.0, -20.0);
     glVertex3f(-180.0, -50.0, -100.0);
@@ -122,7 +140,7 @@ void kiri(void){
 void kanan(void){
     ///kanan
     glBegin(GL_QUADS);
-    glColor3f(255/255.0, 0/255.0, 205/255.0);
+    glColor3ub(255-20, 250-20, 205-20);
     glVertex3f(55.0, 30.0, 30.0);
     glVertex3f(55.0, -50.0, 30.0);
     glVertex3f(55.0, -50.0, 10.0);
@@ -130,7 +148,7 @@ void kanan(void){
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(255/255.0, 0/255.0, 205/255.0);
+    glColor3ub(255-20, 250-20, 205-20);
     glVertex3f(130.0, 30.0, 30.0);
     glVertex3f(130.0, -50.0, 30.0);
     glVertex3f(130.0, -50.0, -20.0);
@@ -146,7 +164,7 @@ void kanan(void){
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(255/255.0, 0/255.0, 205/255.0);
+    glColor3ub(255-20, 250-20, 205-20);
     glVertex3f(180.0, 30.0, -20.0);
     glVertex3f(180.0, -50.0, -20.0);
     glVertex3f(180.0, -50.0, -100.0);
@@ -1059,6 +1077,15 @@ glColor3ub(0,0,50);
     glVertex3f(17,46,10.3);
     glVertex3f(17,54,10.3);
     glVertex3f(-17,54,10.3);
+    glEnd();
+    glBegin(GL_POLYGON);
+    ngon(500,0,50,2.5,45,10.4);
+    glEnd();
+    glBegin(GL_POLYGON);
+    ngon(500,-8,50,2.5,45,10.4);
+    glEnd();
+    glBegin(GL_POLYGON);
+    ngon(500,8,50,2.5,45,10.4);
     glEnd();
     for(float i=0;i<43;i+=21.25)
         garis(i,1);
