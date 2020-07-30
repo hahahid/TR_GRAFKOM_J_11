@@ -1438,6 +1438,43 @@ glColor3ub(100,100,100);
     glVertex3f(126-x,-50,32);
     x+=27;
     }
+    x-=9;
+    //
+    glColor3ub(255-20, 250-20, 205-20);
+    glVertex3f(-128.5+x,-50,32);
+    glVertex3f(-128.5+x,30,32);
+    glVertex3f(-126+x,30,32);
+    glVertex3f(-126+x,-50,32);
+
+    glColor3ub(255-50, 253-50, 208-50);
+    glVertex3f(-129.5+x,-50,30);
+    glVertex3f(-129.5+x,30,30);
+    glVertex3f(-128.5+x,30,32);
+    glVertex3f(-128.5+x,-50,32);
+
+    glVertex3f(-125+x,-50,30);
+    glVertex3f(-125+x,30,30);
+    glVertex3f(-126+x,30,32);
+    glVertex3f(-126+x,-50,32);
+
+    ///----///
+
+    glColor3ub(255-20, 250-20, 205-20);
+    glVertex3f(128.5-x,-50,32);
+    glVertex3f(128.5-x,30,32);
+    glVertex3f(126-x,30,32);
+    glVertex3f(126-x,-50,32);
+
+    glColor3ub(255-50, 253-50, 208-50);
+    glVertex3f(129.5-x,-50,30);
+    glVertex3f(129.5-x,30,30);
+    glVertex3f(128.5-x,30,32);
+    glVertex3f(128.5-x,-50,32);
+
+    glVertex3f(125-x,-50,30);
+    glVertex3f(125-x,30,30);
+    glVertex3f(126-x,30,32);
+    glVertex3f(126-x,-50,32);
     ///horizontal
     for(int i=0; i<3;i++)
     {
