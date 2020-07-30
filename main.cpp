@@ -1,6 +1,5 @@
 #include<windows.h>
 #include<gl/glut.h>
-#include <cmath>
 #include<math.h>
 
 int WindowWidth;
@@ -26,7 +25,7 @@ int is_depth;
 int main (int argc, char **argv){
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-    WindowWidth = 1300;
+	WindowWidth = 1300;
     WindowHeight = 650;
     glutInitWindowSize(WindowWidth,WindowHeight);
     glutInitWindowPosition(50, 50);
@@ -45,12 +44,13 @@ int main (int argc, char **argv){
 void init(void){
     glClearColor(70/255.0, 130/255.0, 180/255.0, 0.0);
     glEnable(GL_DEPTH_TEST);
+
 glEnable(GL_LIGHTING);
 glEnable(GL_COLOR_MATERIAL);
 glEnable(GL_LIGHT0);
 glEnable(GL_BLEND);
 glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
-    glViewport(0,0,WindowWidth,WindowHeight);
+glViewport(0,0,WindowWidth,WindowHeight);
     //glDepthFunc(GL_LEQUAL);
     is_depth = 1;
     glMatrixMode(GL_MODELVIEW);
@@ -1443,6 +1443,43 @@ glColor3ub(100,100,100);
     glVertex3f(126-x,-50,32);
     x+=27;
     }
+    x-=9;
+    //
+    glColor3ub(255-20, 250-20, 205-20);
+    glVertex3f(-128.5+x,-50,32);
+    glVertex3f(-128.5+x,30,32);
+    glVertex3f(-126+x,30,32);
+    glVertex3f(-126+x,-50,32);
+
+    glColor3ub(255-50, 253-50, 208-50);
+    glVertex3f(-129.5+x,-50,30);
+    glVertex3f(-129.5+x,30,30);
+    glVertex3f(-128.5+x,30,32);
+    glVertex3f(-128.5+x,-50,32);
+
+    glVertex3f(-125+x,-50,30);
+    glVertex3f(-125+x,30,30);
+    glVertex3f(-126+x,30,32);
+    glVertex3f(-126+x,-50,32);
+
+    ///----///
+
+    glColor3ub(255-20, 250-20, 205-20);
+    glVertex3f(128.5-x,-50,32);
+    glVertex3f(128.5-x,30,32);
+    glVertex3f(126-x,30,32);
+    glVertex3f(126-x,-50,32);
+
+    glColor3ub(255-50, 253-50, 208-50);
+    glVertex3f(129.5-x,-50,30);
+    glVertex3f(129.5-x,30,30);
+    glVertex3f(128.5-x,30,32);
+    glVertex3f(128.5-x,-50,32);
+
+    glVertex3f(125-x,-50,30);
+    glVertex3f(125-x,30,30);
+    glVertex3f(126-x,30,32);
+    glVertex3f(126-x,-50,32);
     ///horizontal
     for(int i=0; i<3;i++)
     {
@@ -1616,6 +1653,114 @@ glColor3ub(255-20, 250-20, 205-20);
     glVertex3f(55,-50,30);
     glVertex3f(55,-50,32);
     glVertex3f(55,-45,32);
+    glEnd();
+    
+    ///-----////tengah horizontal
+    y=18;
+    glBegin(GL_QUADS);
+    for(int i=0; i<3;i++)
+    {
+        glColor3ub(255-20, 250-20, 205-20);
+    glVertex3f(-129.5+85,24-y,32-20);
+    glVertex3f(-129.5+85,27-y,32-20);
+    glVertex3f(-55+100,27-y,32-20);
+    glVertex3f(-55+100,24-y,32-20);
+
+    glColor3ub(255-50, 253-50, 208-50);
+    glVertex3f(-129.5+85,27-y,32-20);
+    glVertex3f(-129.5+85,27-y,30-20);
+    glVertex3f(-55+100,27-y,30-20);
+    glVertex3f(-55+100,27-y,32-20);
+
+    glVertex3f(-129.5+85,24-y,32-20);
+    glVertex3f(-129.5+85,24-y,30-20);
+    glVertex3f(-55+100,24-y,30-20);
+    glVertex3f(-55+100,24-y,32-20);
+
+    y+=18;
+    }
+
+    ///atas
+    glColor3ub(255-20, 250-20, 205-20);
+    glVertex3f(-129.5+85,24,32-20);
+    glVertex3f(-129.5+85,30,32-20);
+    glVertex3f(-55+100,30,32-20);
+    glVertex3f(-55+100,24,32-20);
+
+    glColor3ub(255-50, 253-50, 208-50);
+    glVertex3f(-129.5+85,30,32-20);
+    glVertex3f(-129.5+85,30,30-20);
+    glVertex3f(-55+100,30,30-20);
+    glVertex3f(-55+100,30,32-20);
+
+    glVertex3f(-129.5+85,24,32-20);
+    glVertex3f(-129.5+85,24,30-20);
+    glVertex3f(-55+100,24,30-20);
+    glVertex3f(-55+100,24,32-20);
+
+    ///vertical
+    //1
+    glColor3ub(255-20, 250-20, 205-20);
+    glVertex3f(-128.5+84,-50,32-20);
+    glVertex3f(-128.5+84,30,32-20);
+    glVertex3f(-126+84,30,32-20);
+    glVertex3f(-126+84,-50,32-20);
+
+    glColor3ub(255-50, 253-50, 208-50);
+    glVertex3f(-125+84,-50,30-20);
+    glVertex3f(-125+84,30,30-20);
+    glVertex3f(-126+84,30,32-20);
+    glVertex3f(-126+84,-50,32-20);
+
+    //4
+    glColor3ub(255-20, 250-20, 205-20);
+    glVertex3f(128.5-84,-50,32-20);
+    glVertex3f(128.5-84,30,32-20);
+    glVertex3f(126-84,30,32-20);
+    glVertex3f(126-84,-50,32-20);
+
+    glColor3ub(255-50, 253-50, 208-50);
+    glVertex3f(125-84,-50,30-20);
+    glVertex3f(125-84,30,30-20);
+    glVertex3f(126-84,30,32-20);
+    glVertex3f(126-84,-50,32-20);
+
+    //2
+    glColor3ub(255-20, 250-20, 205-20);
+    glVertex3f(-128.5+111,-50,32-20);
+    glVertex3f(-128.5+111,30,32-20);
+    glVertex3f(-126+111,30,32-20);
+    glVertex3f(-126+111,-50,32-20);
+
+    glColor3ub(255-50, 253-50, 208-50);
+    glVertex3f(-125+111,-50,30-20);
+    glVertex3f(-125+111,30,30-20);
+    glVertex3f(-126+111,30,32-20);
+    glVertex3f(-126+111,-50,32-20);
+
+    glVertex3f(-129.5+111,-50,30-20);
+    glVertex3f(-129.5+111,30,30-20);
+    glVertex3f(-128.5+111,30,32-20);
+    glVertex3f(-128.5+111,-50,32-20);
+
+    //3
+    glColor3ub(255-20, 250-20, 205-20);
+    glVertex3f(128.5-111,-50,32-20);
+    glVertex3f(128.5-111,30,32-20);
+    glVertex3f(126-111,30,32-20);
+    glVertex3f(126-111,-50,32-20);
+
+    glColor3ub(255-50, 253-50, 208-50);
+    glVertex3f(125-111,-50,30-20);
+    glVertex3f(125-111,30,30-20);
+    glVertex3f(126-111,30,32-20);
+    glVertex3f(126-111,-50,32-20);
+
+    glVertex3f(129.5-111,-50,30-20);
+    glVertex3f(129.5-111,30,30-20);
+    glVertex3f(128.5-111,30,32-20);
+    glVertex3f(128.5-111,-50,32-20);
+
     glEnd();
 }
 
@@ -5049,7 +5194,6 @@ void dinding_lt1(void){
     x-=27;
     }
 }
-
 void duplicate(void){
     int a = 15;
 
@@ -6221,7 +6365,7 @@ void ukuran(int lebar, int tinggi){
     if (tinggi == 0) tinggi = 1;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(70.0, lebar / tinggi, 5.0, 500.0);
+    gluPerspective(60.0, lebar / tinggi, 5.0, 500.0);
     glTranslatef(0.0, -5.0, -150.0);
     glMatrixMode(GL_MODELVIEW);
 }
