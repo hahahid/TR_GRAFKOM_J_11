@@ -125,7 +125,7 @@ void kiri(void){
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(169/255.0, 169/255.0, 169/255.0);
+    glColor3ub(169-20, 169-20, 169-20);
     glVertex3f(-130.0, 30.0, 30.0);
     glVertex3f(-130.0, -50.0, 30.0);
     glVertex3f(-130.0, -50.0, -20.0);
@@ -141,7 +141,7 @@ void kiri(void){
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(169/255.0, 169/255.0, 169/255.0);
+    glColor3ub(169-20, 169-20, 169-20);
     glVertex3f(-180.0, 30.0, -20.0);
     glVertex3f(-180.0, -50.0, -20.0);
     glVertex3f(-180.0, -50.0, -100.0);
@@ -160,7 +160,7 @@ void kanan(void){
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(169/255.0, 169/255.0, 169/255.0);
+    glColor3ub(169-20, 169-20, 169-20);
     glVertex3f(130.0, 30.0, 30.0);
     glVertex3f(130.0, -50.0, 30.0);
     glVertex3f(130.0, -50.0, -20.0);
@@ -176,7 +176,7 @@ void kanan(void){
     glEnd();
 
     glBegin(GL_QUADS);
-    glColor3f(169/255.0, 169/255.0, 169/255.0);
+    glColor3ub(169-20, 169-20, 169-20);
     glVertex3f(180.0, 30.0, -20.0);
     glVertex3f(180.0, -50.0, -20.0);
     glVertex3f(180.0, -50.0, -100.0);
